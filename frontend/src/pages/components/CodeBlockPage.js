@@ -30,7 +30,7 @@ const CodeBlockPage = () => {
       setCodeBlockData(resp.data);
     });
 
-    socketRef.current = io(SERVER_URL);
+    socketRef.current = io("https://mentor-student-coding-backend.vercel.app");
 
 
     socketRef.current.on("myRole", (roleData) => {
