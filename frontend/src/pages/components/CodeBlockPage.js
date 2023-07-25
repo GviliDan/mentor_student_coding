@@ -19,7 +19,6 @@ const CodeBlockPage = () => {
   const [userType, setUserType] = useState('student'); 
   const socketRef = useRef();
   const [isCorrect,setIsCorrect] = useState(false);
-  const webSocketServerURL = 'https://mentor-student-coding-backend.vercel.app/'; 
 
 
 
@@ -42,7 +41,7 @@ const CodeBlockPage = () => {
         if (whoamI !== 'student')
           setCodeBlockContent(data);
       });
-    }, [id, webSocketServerURL]);
+    });
     
 
     socketRef.current.emit("joinCodeBlock", JSON.stringify({ id: id }));
