@@ -1,7 +1,8 @@
-// models/CodeBlock.js
+const { Schema } = require('mongoose');
 const mongoose = require('mongoose');
 
 const codeBlockSchema = new mongoose.Schema({
+  _id: { type: Schema.Types.ObjectId },
   title: {
     type: String,
     required: true,

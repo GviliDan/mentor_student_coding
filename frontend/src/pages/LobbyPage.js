@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import CodeBlocksApi from '../api/services/CodeBlocksApi';
+import '../css/Lobby.css'; 
 
-const LobbyPage = () => {
+const Lobby = () => {
   const [codeBlocks, setCodeBlocks] = useState([]);
 
   useEffect(() => {
-    // Fetch code blocks from the backend when the component mounts
-    axios.get('http://localhost:5000/api/codeblocks')
-      .then((response) => {
-        setCodeBlocks(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching code blocks:', error);
-      });
+    CodeBlocksApi.getCodeBlocks().then(resp => {
+      if (resp.status === 200) {
+        setCodeBlocks(resp.data);
+      }
+    });
   }, []);
 
   return (
-    <div>
-      <h1>Choose code block</h1>
+    <div className="lobby-container"> 
+      <p className="lobby-title">Choose code block</p> 
       <ul>
         {codeBlocks.map((block) => (
           <li key={block.title}>
-            <Link to={`/code/${encodeURIComponent(block.title)}`}>
-              <button>{block.title}</button>
+            <Link to={`/code/${encodeURIComponent(block._id)}`}>
+              <button className="code-block-button"> 
+                {block.title}
+              </button>
             </Link>
           </li>
         ))}
@@ -32,4 +32,4 @@ const LobbyPage = () => {
   );
 };
 
-export default LobbyPage;
+export default Lobby;

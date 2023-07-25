@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LobbyPage from './pages/LobbyPage';
-import CodeBlockPage from './pages/CodeBlockPage';
+import CodeBlockPage from './pages/components/CodeBlockPage';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<LobbyPage />} />
-          <Route path="/code/:title" element={<CodeBlockPage />} />
+          <Route path="/code/:id" element={<CodeBlockPage />} />
           <Route path="*" element={<LobbyPage />} /> {/* Default route */}
         </Routes>
     </Router>

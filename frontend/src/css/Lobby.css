@@ -1,0 +1,48 @@
+/* css/Lobby.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../css/Productivity-Tools.png'); 
+    background-color: #f9f9f9;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+}
+  
+.lobby-title {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 100px; /* Adjust the margin-top value to move the h1 down */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #a3aeb9;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+
+  
+  
