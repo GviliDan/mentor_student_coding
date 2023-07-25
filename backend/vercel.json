@@ -1,13 +1,7 @@
 {
-    "version" : 2,
-    "builds": [
-      { "src": "*.js", "use": "@vercel/node" }
-    ],
-
+    "version": 2,
     "routes": [
-      { 
-        "src": "/(.*)",
-       "dest": "/" 
-    }
+      { "src": "/api/codeBlocks/(.*)", "dest": "/api/codeBlocks/$1" },
+      { "src": "/(.*)", "dest": "/" }
     ]
   }
