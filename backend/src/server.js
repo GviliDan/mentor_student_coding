@@ -26,7 +26,7 @@ app.use(express.json());
 const io = socketio(server, { cors: corsOptions });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect('mongodb+srv://dang240:fPrxJ9PBmIm7OzOx@cluster0.2onz8rg.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
