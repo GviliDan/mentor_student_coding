@@ -66,12 +66,12 @@ const CodeBlockPage = () => {
   return (
     <div className="code-block-container">
       {/* <h1>{codeBlockData.title}</h1> */}
-      <title>{codeBlockData.title}</title>
+      <div className="title">{codeBlockData.title}</div>
 
       {userType === 'mentor' ? (
         <div>
-          <user>This is read-only mode for the mentor</user>
-          <description>{codeBlockData.description}</description>
+          <div className="user">This is read-only mode for the mentor</div>
+          <div className="description">{codeBlockData.description}</div>
 
           <pre>
             <code>
@@ -82,14 +82,14 @@ const CodeBlockPage = () => {
           </pre>
           {codeBlockContent === codeBlockData.solution && (
             <div className="smiley-container">
-            <img src={smileyImage} alt="Smiley" className="smiley-image" />
-          </div>
+              <img src={smileyImage} alt="Smiley" className="smiley-image" />
+            </div>
           )}
         </div>
       ) : (
         <div>
-          <user>This is editable mode for the student</user>
-          <description>{codeBlockData.description}</description>
+          <div className="user">This is editable mode for the student</div>
+          <div className="description">{codeBlockData.description}</div>
 
           <textarea
             value={codeBlockContent}
@@ -98,8 +98,8 @@ const CodeBlockPage = () => {
           />
           {isCorrect && (
             <div className="smiley-container">
-            <img src={smileyImage} alt="Smiley" className="smiley-image" />
-          </div>
+              <img src={smileyImage} alt="Smiley" className="smiley-image" />
+            </div>
           )}
         </div>
       )}
