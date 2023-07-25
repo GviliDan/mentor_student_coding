@@ -64,10 +64,13 @@ io.on('connection', (socket) => {
     const msg = JSON.parse(data);
     if (codeBlockRooms[msg.id] == null)
       codeBlockRooms[msg.id] = [];
+      console.log("this is the check1" + codeBlockRooms[msg.id])
 
     if (codeBlockRooms[msg.id].length == 0) {
+      console.log("this is the check2" + codeBlockRooms[msg.id])
       socket.emit('myRole', JSON.stringify({ role: 'mentor' }));
     } else {
+      console.log("this is the check3" + codeBlockRooms[msg.id])
       socket.emit('myRole', JSON.stringify({ role: 'student' }));
     }
 
