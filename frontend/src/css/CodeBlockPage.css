@@ -9,7 +9,7 @@ body {
   }
 
   
-  title {
+  .title {
     color: #fff;
     font-size: 32px;
     text-align: center;
@@ -23,7 +23,7 @@ body {
     margin-top: 65px;
   }
 
-  user {
+  .user {
     margin-top: 10px;
     color: #f2f2f2;
     display: flex; 
@@ -34,7 +34,7 @@ body {
 
   }
 
-  description {
+  .description {
     margin-top: 10px;
     color: #f2f2f2;
     display: flex; 

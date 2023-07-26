@@ -14,6 +14,7 @@ const allowedOrigins = ['https://mentor-student-coding-frontend.vercel.app', 'ht
 
 // Set up middleware
 const corsOptions = {
+<<<<<<< HEAD
   origin: function (origin, callback) {
     // Check if the origin is in the allowed origins list or if it's not defined (e.g., a local request)
     if (allowedOrigins.includes(origin) || !origin) {
@@ -22,6 +23,9 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
+=======
+  origin: 'mentor-student-coding-frontend.vercel.app',
+>>>>>>> my-feature-branch
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   // Allow WebSocket connections
