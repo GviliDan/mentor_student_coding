@@ -36,7 +36,7 @@ ul {
   
   button {
     padding: 10px;
-    background-color: #a3aeb9;
+    background-color: rgba(128, 128, 128, 0.6); 
     color: #fff;
     border: none;
     border-radius: 20px;
