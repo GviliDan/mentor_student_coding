@@ -1,3 +1,3 @@
 
 
-export const SERVER_URL = "http://localhost:8106"
+export const SERVER_URL = "mentor-student-coding-backend.vercel.app"
