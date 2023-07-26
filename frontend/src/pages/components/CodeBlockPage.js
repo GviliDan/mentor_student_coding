@@ -49,7 +49,7 @@ const CodeBlockPage = () => {
     return () => {
       socketRef.current.disconnect();
     };
-  },);
+  }, []);
 
   const handleCodeChange = (newCode) => {
     if (userType !== 'student')

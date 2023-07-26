@@ -11,7 +11,6 @@ function App() {
         <Routes>
           <Route path="/" element={<LobbyPage />} />
           <Route path="/code/:id" element={<CodeBlockPage />} />
-          <Route path="*" element={<LobbyPage />} /> {/* Default route */}
         </Routes>
     </Router>
   );
